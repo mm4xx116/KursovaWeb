@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <title>Менеджер паролів</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <img src="lock-icon.png" alt="icon" class="logo" />
+    <h1>Генератор паролів</h1>
+  </header>
+
+  <main class="manager-grid">
+  <section class="password-box">
+    <h2>Менеджер паролів</h2>
+
+    <input type="text" id="search" placeholder="Пошук..." oninput="displayPasswords()" class="input-field" />
+
+    <div id="password-list" class="password-list"></div>
+
+    <h3>Новий запис</h3>
+    <input type="text" id="new-username" placeholder="Логін / Email" class="input-field" />
+    <input type="text" id="new-password" placeholder="Пароль" class="input-field" />
+
+    <div class="button-row">
+      <button onclick="addPassword()">Додати</button>
+    </div>
+    <a href="index.html" class="back-link">← На головну</a>
+  </section>
+</main>
+
+  <script src="script.js"></script>
+</body>
+</html>

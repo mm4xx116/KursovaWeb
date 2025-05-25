@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <title>Генерація паролів</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/zxcvbn/4.4.2/zxcvbn.js"></script>
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header>
+    <img src="lock-icon.png" alt="icon" class="logo" />
+    <h1>Генератор паролів</h1>
+  </header>
+
+  <main class="generator-layout">
+    <section class="generator-box">
+      <h2>Створення безпечного пароля</h2>
+
+      <label for="length">Довжина паролю:
+        <span id="length-value">12</span> символів
+      </label>
+        <input type="range" id="length" min="8" max="32" value="12" />
+
+      <label><input type="checkbox" id="lowercase" checked /> Використовувати малі літери (a-z)</label><br>
+      <label><input type="checkbox" id="uppercase" checked /> Використовувати великі літери (A-Z)</label><br>
+      <label><input type="checkbox" id="numbers" checked />  Використовувати цифри (0-9)</label><br>
+      <label><input type="checkbox" id="symbols" /> Використовувати символи (!@#$%^&*)</label><br>
+
+      <button onclick="generatePassword()">Згенерувати</button><br>
+      <input type="text" id="generated" readonly />
+      <input type="text" id="save-username" class="input-field" placeholder="Назва/логін для збереження" />
+      <button onclick="saveGeneratedPassword()">Зберегти</button>
+      <button onclick="copyPassword()">Копіювати</button>
+      <p id="strength"></p>
+
+      <a href="index.html">← Назад на головну</a>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
